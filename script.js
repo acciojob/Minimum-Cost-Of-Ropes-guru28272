@@ -3,7 +3,7 @@ const formEle = document.querySelector(`#form`);
 const inputVal = document.querySelector(`input`);
 const result = document.querySelector(`#result`);
 
-formEle.addEventListener(`click`, function (e) {
+formEle.addEventListener(`submit`, function (e) {
   e.preventDefault();
   let arr = inputVal.value.split(`,`);
   getSorted(arr);
