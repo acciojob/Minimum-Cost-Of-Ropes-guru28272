@@ -4,7 +4,7 @@ const inputVal = document.querySelector(`input`);
 const result = document.querySelector(`#result`);
 const submitInput = inputVal.nextElementSibling;
 
-submitInput.addEventListener(`click`, function (event) {
+submitInput.addEventListener(`submit`, function (event) {
   event.preventDefault();
   let arr = inputVal.value.split(`,`);
   getSorted(arr);
