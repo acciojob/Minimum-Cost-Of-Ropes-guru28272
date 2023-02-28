@@ -2,8 +2,9 @@
 const formEle = document.querySelector(`#form`);
 const inputVal = document.querySelector(`input`);
 const result = document.querySelector(`#result`);
+const submitInput = inputVal.nextElementSibling;
 
-formEle.addEventListener(`submit`, function (event) {
+submitInput.addEventListener(`click`, function (event) {
   event.preventDefault();
   let arr = inputVal.value.split(`,`);
   getSorted(arr);
@@ -12,6 +13,7 @@ formEle.addEventListener(`submit`, function (event) {
   let cost = 0;
   while (arr.length > 1) {
     res = Number(arr[0]) + Number(arr[1]);
+    // console.log(res);
 
     arr.splice(0, 2);
     arr.push(res);
